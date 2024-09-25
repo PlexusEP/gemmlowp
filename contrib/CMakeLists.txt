@@ -16,7 +16,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-get_filename_component(gemmlowp_src ${gemmlowp_SOURCE_DIR} PATH)
+set(gemmlowp_src ${gemmlowp_SOURCE_DIR})
 
 if(WIN32)
   # one can enable simd from the cmake command line, ie -DCMAKE_CXX_FLAGS="/arch:AVX2
